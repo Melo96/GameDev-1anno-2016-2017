@@ -10,7 +10,7 @@ int differenceY(int ycpu, int yuser);
 int main()
 {
     char grid[10][10];
-    srand((unsigned)time(0));
+    srand(3);
     
     int xcpu = 0;
     int ycpu = 0;
@@ -26,6 +26,7 @@ int main()
 
         xcpu = rand() % (10);
         ycpu = rand() % (10);
+ 
     
         grid[xcpu][ycpu] = cpu;
     
@@ -34,12 +35,11 @@ int main()
     
         do
         {
-            cout << "\nInserire riga dove colpire da 0 a 10" << endl;
+            cout << "Inserire riga dove colpire da 0 a 10" << endl;
             cin >> x;
+            
             cout << "\nInserire colonna dove colipre da 0 a 10" << endl;
             cin >> y;
-            cout << "\n" << endl;
-
         
         
             dx = differenceX(xcpu , x);
